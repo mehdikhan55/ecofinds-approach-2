@@ -1,38 +1,53 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 
-import { HomeTabScreen, MessageTabScreen , AccountTabScreen  } from '../screens';
+import {
+    ListingDetailsScreen,
+    ListingEditScreen,
+    MessagesScreen,
+    ViewImageScreen,
+    AccountScreen,
+    ListingsScreen,
+} from './';
 
-
-const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const AppStack = () => {
     return (
-        <Tab.Navigator
+        <Stack.Navigator
             initialRouteName='Listings'
             screenOptions={{
                 headerShown: false
             }}
-            options={{
-
-            }}
         >
-            <Tab.Screen
-                name="Listings"
-                component={HomeTabScreen}
+            <Stack.Screen
+                name='Accout'
+                component={AccountScreen}
             />
-            <Tab.Screen
-                name="Messages tab"
-                component={MessageTabScreen}
+            <Stack.Screen
+                name='Listing Details'
+                component={ListingDetailsScreen}
             />
-            <Tab.Screen
-                name="Account"
-                component={AccountTabScreen}
+            <Stack.Screen
+                name='Edit Listing'
+                component={ListingEditScreen}
+            />
+            <Stack.Screen
+                name='Messages'
+                component={MessagesScreen}
+            />
+            <Stack.Screen
+                name='Listings'
+                component={ListingsScreen}
+            />
+            <Stack.Screen
+                name='View Image'
+                component={ViewImageScreen}
             />
 
-        </Tab.Navigator>
+        </Stack.Navigator>
 
     )
 }

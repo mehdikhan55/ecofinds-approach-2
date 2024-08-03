@@ -4,10 +4,8 @@ import ListingEditScreen from '../screens/ListingEditScreen'
 import MessagesScreen from '../screens/MessagesScreen'
 import ViewImageScreen from '../screens/ViewImageScreen'
 import AccountScreen from '../screens/AccountScreen'
+import MainDashboard from './MainDashboard'
 
-import AccountTabScreen from './AccountTabScreen'
-import HomeTabScreen from './HomeTabScreen'
-import MessageTabScreen from './MessageTabScreen'
 
 export {
     ListingsScreen,
@@ -16,8 +14,6 @@ export {
     MessagesScreen,
     ViewImageScreen,
     AccountScreen,
-    AccountTabScreen,
-    HomeTabScreen,
-    MessageTabScreen,
+    MainDashboard
 
 }
